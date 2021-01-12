@@ -29,5 +29,7 @@ gapminder_data %>%
   pivot_wider(names_from = year, values_from = lifeExp)
 ## for some reason, i cannot update tidyverse 
 ##   to get function pivot_wider
+## probably because my R version is from Dec 2018
+
 
 
