@@ -2,12 +2,14 @@
 library(tidyverse)
 
 #read in the data
-gapminder_1997 <- read_csv("gapminder_1997.csv")
+gapminder_1997 <- read_csv("data/gapminder_1997.csv")
 View(gapminder_1997)
 gapminder_1997
 
-ggplot(gapminder_1997, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop/1000000)) +
-  labs(x = "GDP per capita", y= "Life Expectancy", size = "Population (in millions)",
+ggplot(gapminder_1997, aes(x = gdpPercap, y = lifeExp, 
+                           color = continent, size = pop/1000000)) +
+  labs(x = "GDP per capita", y= "Life Expectancy", 
+       size = "Population (in millions)",
        title = "Do people in wealthy countries live longer?") +
   geom_point() + scale_color_brewer(palette = "Set1")
 
