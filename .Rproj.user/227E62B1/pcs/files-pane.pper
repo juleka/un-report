@@ -1,9 +1,0 @@
-{
-    "path" : "~/git/un-report/reports",
-    "sortOrder" : [
-        {
-            "ascending" : true,
-            "columnIndex" : 2
-        }
-    ]
-}
