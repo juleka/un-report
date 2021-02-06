@@ -1,7 +1,7 @@
 ---
 title: "A UN Report on the Relationship between GDP and Life Expectancy"
-author: "Jule Krüger"
-date: "1/12/2021"
+author: "_Your Name Here_"
+date: _Today's date_
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -25,19 +25,21 @@ gapminder_1997 <- read_csv("../data/gapminder_1997.csv")
 
 # My plot 
 
-```{r gdp_lifeexp_1997, echo=FALSE}
+```{r gdp_lifeexp_1997, echo=TRUE}
 ggplot(data=gapminder_1997) + aes(x = gdpPercap, y = lifeExp,
                                   color = continent) +
   geom_point() + labs(x = "GDP per capita", y = "Life Expectancy",
                       title = "GPD per capita vs. Life Expectancy in 1997")
 ```
 
-```{r data_summary, include=FALSE}
-nCountries <- length(unique(gapminder_1997$country))
+```{r data_summary, include=TRUE}
+nCountries <- gapminder_1997 %>%
+  select(country) %>% 
+  n_distinct()
 ```
 
-The *number of countries* that entered the above analysis was `r nCountries`.  
-\
+The number of countries that entered the above analysis was `r nCountries`.  
+
 
 1. **R**
 1. *ggplot*
