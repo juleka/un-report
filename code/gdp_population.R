@@ -32,7 +32,7 @@ violin_plot <- ggplot(gapminder_1997, aes(x= continent, y=lifeExp)) +
   geom_violin(alpha=.5, aes(fill=continent)) + geom_jitter(aes(size=pop)) +
   theme_bw()
 ggsave(plot=violin_plot, filename="vp-lifeExp-continent-1997.pdf", height = 5, width = 8)
-ggsave("my_awesome_plot.jpg", violin_plot, height = 5, width = 8)
+ggsave(filename = "figures/my_awesome_plot.jpg", violin_plot, height = 5, width = 8)
 
 #univariate plots (histogram)
 ggplot(gapminder_1997) +
@@ -41,7 +41,7 @@ ggplot(gapminder_1997) +
   theme_bw() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 #saving a ggplot
-ggsave("my_histogram.pdf", height = 6, width = 4)
+ggsave("figures/my_histogram.pdf", height = 6, width = 4)
 
 #facetting
 ggplot(gapminder_1997) +
